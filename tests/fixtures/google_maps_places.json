@@ -1,0 +1,80 @@
+{
+ "run_id": "cmvk5sjz90agx41o5a8raocuh",
+ "slug": "google_maps_places",
+ "version": "1.1.0",
+ "status": "done",
+ "input": {
+  "query": "pizza restaurants",
+  "location": "Brooklyn",
+  "country": "us",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-22T23:15:17.242Z",
+ "results": [
+  {
+   "name": "Dellarocco's Brick Oven Pizza",
+   "rank": 1,
+   "hours": "Thursday: 12–10 PM; Friday: 12–10:30 PM; Saturday: 12–10:30 PM; Sunday: 12–10 PM; Monday: 12–10 PM; Tuesday: 12–10 PM; Wednesday: 12–10 PM",
+   "phone": "(718) 858-1010",
+   "rating": 4.6,
+   "address": "214 Hicks St, Brooklyn Heights, NY 11201",
+   "data_id": "0x89c25a4634938a45:0x229fa22c7b1623b9",
+   "reviews": 1390,
+   "website": "dellaroccospizza.com",
+   "category": "Pizza restaurant",
+   "found_by": "pizza restaurants Brooklyn",
+   "latitude": 40.6950091,
+   "maps_url": "https://www.google.com/maps/search/?api=1&query=Dellarocco's%20Brick%20Oven%20Pizza%20214%20Hicks%20St%2C%20Brooklyn%20Heights%2C%20NY%2011201",
+   "place_id": "0x89c25a4634938a45:0x229fa22c7b1623b9",
+   "longitude": -73.9961082,
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdEyx5B5Vwzf2xYOznGZ7AGav3QkGfd3Ao9R-6aKtpH0jsh7C7zp2IXChEAQxKIGAxB2cvRRqDRi0D1dFXwkmR7PSfwdoH48JoOrMTfEj9PaPEYokXMDm3I1k6nEcVI4kYLkXm2iVTOc5e6=w129-h86-k-no",
+   "open_state": "Open · Closes 10 PM",
+   "description": "Thin-crust, brick-oven pizza with a gluten-free option, plus tap beers in an airy, minimalist space.",
+   "price_level": null,
+   "weekly_hours": {
+    "Friday": "12–10:30 PM",
+    "Monday": "12–10 PM",
+    "Sunday": "12–10 PM",
+    "Tuesday": "12–10 PM",
+    "Saturday": "12–10:30 PM",
+    "Thursday": "12–10 PM",
+    "Wednesday": "12–10 PM"
+   },
+   "service_options": null
+  },
+  {
+   "name": "Mo's General",
+   "rank": 3,
+   "hours": "Thursday: 4 PM–12 AM; Friday: 4 PM–12 AM; Saturday: 12 PM–12 AM; Sunday: 12 PM–12 AM; Monday: 4 PM–12 AM; Tuesday: 4 PM–12 AM; Wednesday: 4 PM–12 AM",
+   "phone": null,
+   "rating": 4.5,
+   "address": "620 Lorimer St, Brooklyn, NY 11211",
+   "data_id": "0x89c25947ce8c7b23:0x98e15f00d20201ee",
+   "reviews": 304,
+   "website": "mosgeneral.com",
+   "category": "Pizza restaurant",
+   "found_by": "pizza restaurants Brooklyn",
+   "latitude": 40.7156088,
+   "maps_url": "https://www.google.com/maps/search/?api=1&query=Mo's%20General%20620%20Lorimer%20St%2C%20Brooklyn%2C%20NY%2011211",
+   "place_id": "0x89c25947ce8c7b23:0x98e15f00d20201ee",
+   "longitude": -73.9494481,
+   "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfJQ5hOdxnqcrCMUHjLJnfIpYNKXJjT_zKbthU7Q8DzFNnjLWacX6JLzqJtnr4U1H9iNkOkfBNSfuXIHI0S6vASnUiBrhLp37R95HYzTBJBWa3vmqzqvbSV48eaF36tRt04Ootx0g=w86-h114-k-no",
+   "open_state": "Open · Closes 12 AM",
+   "description": "Pizza, salads, cocktails & groceries in a cool neighborhood setup with outdoor seating.",
+   "price_level": null,
+   "weekly_hours": {
+    "Friday": "4 PM–12 AM",
+    "Monday": "4 PM–12 AM",
+    "Sunday": "12 PM–12 AM",
+    "Tuesday": "4 PM–12 AM",
+    "Saturday": "12 PM–12 AM",
+    "Thursday": "4 PM–12 AM",
+    "Wednesday": "4 PM–12 AM"
+   },
+   "service_options": null
+  }
+ ],
+ "_note": "Real run of 2026-10-22; two of the three places are kept here."
+}

@@ -1,0 +1,56 @@
+{
+ "run_id": "cmvk5mzkp0a9641o5lzaxsykt",
+ "slug": "place_reviews",
+ "version": "1.1.0",
+ "status": "done",
+ "input": {
+  "query": "Dellarocco's Brick Oven Pizza",
+  "location": "Brooklyn, NY",
+  "country": "us",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-22T23:10:58.676Z",
+ "results": [
+  {
+   "date": "2 months ago",
+   "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2s5SGRURkNjREJoYXpoWGFXSTRTalJHYWw5VU1FRRAB!2m1!1s0x0:0x229fa22c7b1623b9!3m1!1s2@1:CAIQACodChtycF9oOk9HdTFCcDBhazhXaWI4SjRGal9UMEE%7C%7C?hl=en-US",
+   "rank": 1,
+   "text": "The service was wonderful! This place has such a wholesome vibe to it and the older staff member was always keeping our glasses full of water...",
+   "author": "COOKIES4661",
+   "images": [],
+   "rating": 5,
+   "source": "Google",
+   "data_id": "0x89c25a4634938a45:0x229fa22c7b1623b9",
+   "iso_date": "2026-07-31T19:13:04.653Z",
+   "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2s5SGRURkNjREJoYXpoWGFXSTRTalJHYWw5VU1FRRAB",
+   "place_name": "Dellarocco's Brick Oven Pizza",
+   "image_count": 0,
+   "text_length": 356,
+   "has_owner_response": true,
+   "owner_response_date": "2 months ago",
+   "owner_response_text": "Thank you for the awesome review. We are so happy you had a great experience with us!"
+  },
+  {
+   "date": "7 months ago",
+   "link": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2w5clJtSm1Sek4wVkd4ZmFYWk9ibUZsTjBZM2FHYxAB!2m1!1s0x0:0x229fa22c7b1623b9!3m1!1s2@1:CAIQACodChtycF9oOl9rRmJmRzN0VGxfaXZObmFlN0Y3aGc%7C%7C?hl=en-US",
+   "rank": 2,
+   "text": "If you're looking for a very good place for authentic Italian food in Brooklyn, Dellarocco's is a must-visit. We started with the Caprese, which was incredibly fresh, and followed it up with their Margherita and Four Cheese pizzas...",
+   "author": "Arnab B.",
+   "images": [],
+   "rating": 5,
+   "source": "Google",
+   "data_id": "0x89c25a4634938a45:0x229fa22c7b1623b9",
+   "iso_date": "2026-03-14T18:51:09.669Z",
+   "review_id": "Ci9DQUlRQUNvZENodHljRjlvT2w5clJtSm1Sek4wVkd4ZmFYWk9ibUZsTjBZM2FHYxAB",
+   "place_name": "Dellarocco's Brick Oven Pizza",
+   "image_count": 0,
+   "text_length": 333,
+   "has_owner_response": true,
+   "owner_response_date": "7 months ago",
+   "owner_response_text": "Arnab, thank for the great review with some awesome pictures of the food and atmosphere. We are also so glad you enjoyed the Caprese, Margherita & Four Cheese pizzas..."
+  }
+ ],
+ "_note": "Real run of 2026-10-22; two of the three reviews are kept, review and reply texts cut after the first sentences, reviewer names shortened to first name and last initial. Reviewer profile links and ids removed."
+}

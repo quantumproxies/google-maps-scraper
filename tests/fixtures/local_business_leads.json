@@ -1,0 +1,90 @@
+{
+ "run_id": "cmvk5n1930a9841o5qt03g3yj",
+ "slug": "local_business_leads",
+ "version": "1.8.0",
+ "status": "done",
+ "input": {
+  "query": "dentist",
+  "location": "Austin, TX",
+  "country": "us",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-22T23:11:06.004Z",
+ "results": [
+  {
+   "name": "Forest Family Dentistry - Eastside",
+   "rank": 2,
+   "hours": "Thursday: 7:30 AM–7:30 PM",
+   "phone": "(512) 885-3424",
+   "emails": [],
+   "phones": [
+    "(512) 885-3424"
+   ],
+   "rating": 4.9,
+   "source": "google_maps",
+   "address": "31 Navasota St #130, Austin, TX 78702",
+   "data_id": "0x8644b51007593105:0x2ece9f75be800c2a",
+   "reviews": null,
+   "socials": {
+    "youtube": "https://www.youtube.com/channel/UCP4maFehPfd5w9k60JV4mLA",
+    "facebook": "https://www.facebook.com/ForestFamilyDentistry",
+    "linkedin": "https://www.linkedin.com/company/forest-family-dentistry-pllc",
+    "instagram": "https://www.instagram.com/forestfamilydentist"
+   },
+   "website": "https://forestfamily.com/",
+   "category": "Dental clinic",
+   "latitude": 30.2532101,
+   "maps_url": "https://www.google.com/maps/search/?api=1&query=Forest%20Family%20Dentistry%20-%20Eastside%2031%20Navasota%20St%20%23130%2C%20Austin%2C%20TX%2078702",
+   "place_id": "0x8644b51007593105:0x2ece9f75be800c2a",
+   "longitude": -97.7323322,
+   "checked_at": "2026-10-22",
+   "email_type": null,
+   "open_state": "Open · Closes 7:30 PM",
+   "price_level": null,
+   "site_status": "scanned",
+   "source_pages": [
+    "https://forestfamily.com/",
+    "https://www.forestfamily.com/about"
+   ],
+   "weekly_hours": null
+  },
+  {
+   "name": "ATX Family Dental",
+   "rank": 3,
+   "hours": "Thursday: 8 AM–5 PM",
+   "phone": "(512) 717-3147",
+   "emails": [
+    "info@atxfamilydental.com"
+   ],
+   "phones": [
+    "(512) 717-3147"
+   ],
+   "rating": 4.9,
+   "source": "google_maps",
+   "address": "1700 S 1st St, Austin, TX 78704",
+   "data_id": "0x8644b4eb0b01986f:0x6b241d4769ed491e",
+   "reviews": null,
+   "socials": {
+    "instagram": "https://www.instagram.com/atxfamilydental"
+   },
+   "website": "https://atxfamilydental.com/",
+   "category": "Dentist",
+   "latitude": 30.2482229,
+   "maps_url": "https://www.google.com/maps/search/?api=1&query=ATX%20Family%20Dental%201700%20S%201st%20St%2C%20Austin%2C%20TX%2078704",
+   "place_id": "0x8644b4eb0b01986f:0x6b241d4769ed491e",
+   "longitude": -97.75597049999999,
+   "checked_at": "2026-10-22",
+   "email_type": "generic",
+   "open_state": "Closed · Opens 8 AM Fri",
+   "price_level": null,
+   "site_status": "scanned",
+   "source_pages": [
+    "https://atxfamilydental.com/"
+   ],
+   "weekly_hours": null
+  }
+ ],
+ "_note": "Real run of 2026-10-22 with the default options (no enrich_details, so the review count and weekly hours are not looked up); two of the three leads are kept here."
+}

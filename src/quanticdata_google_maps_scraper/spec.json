@@ -1,0 +1,344 @@
+{
+ "cli": "google-maps-scraper",
+ "name": "Google Maps Scraper",
+ "version": "0.1.0",
+ "description": "Google Maps scraper for Python and the command line: businesses for a keyword and location, Google reviews of any place, and local business leads with emails, phones and socials, as JSON or CSV. Free and open source; sign in with your QuanticData account, no proxies or headless browser to run.",
+ "links": {
+  "repo": "https://github.com/quantumproxies/google-maps-scraper",
+  "page": "https://quanticdata.io/collectors/google-maps-scraper-api/?utm_source=github&utm_medium=cli&utm_campaign=google-maps-scraper",
+  "billing": "https://app.quanticdata.io/billing?utm_source=github&utm_medium=cli&utm_campaign=google-maps-scraper",
+  "pricing": "https://quanticdata.io/pricing/?utm_source=github&utm_medium=cli&utm_campaign=google-maps-scraper"
+ },
+ "commands": [
+  {
+   "name": "places",
+   "collector": "google_maps_places",
+   "method": "places",
+   "help": "Google Maps businesses for a keyword in a location",
+   "description": "Businesses for a keyword in a location — name, rating, address, phone, website, coordinates.",
+   "positional": "query",
+   "positional_is_list": false,
+   "positional_optional": false,
+   "columns": [
+    "rank",
+    "name",
+    "rating",
+    "reviews",
+    "category",
+    "phone",
+    "website"
+   ],
+   "sample": "google_maps_places",
+   "inputs": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "description": "Business type or keyword, e.g. \"pizza restaurants\", \"dentist\".",
+     "arg": "query"
+    },
+    {
+     "name": "location",
+     "type": "string",
+     "required": true,
+     "description": "City / area / address, e.g. \"Brooklyn, NY\" or \"Milano\".",
+     "arg": "location"
+    },
+    {
+     "name": "country",
+     "type": "string",
+     "required": false,
+     "description": "Country to run the request from, as an ISO 3166-1 alpha-2 code (us, gb, de...).",
+     "arg": "country"
+    },
+    {
+     "name": "lang",
+     "type": "string",
+     "required": false,
+     "description": "Interface language (hl), e.g. en, it, de.",
+     "arg": "lang"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many places to deliver at most (1–300). You pay only for delivered places.",
+     "min": 1,
+     "max": 300,
+     "default": 20,
+     "arg": "max_results"
+    },
+    {
+     "name": "enrich_details",
+     "type": "boolean",
+     "required": false,
+     "description": "Look each place up to fill the weekly opening hours and the review count when Google's list leaves them out. Same price per place; set false for the list fields only (faster).",
+     "default": true,
+     "arg": "enrich_details"
+    }
+   ]
+  },
+  {
+   "name": "reviews",
+   "collector": "place_reviews",
+   "method": "reviews",
+   "help": "Google reviews of one place",
+   "description": "Google reviews of one place — rating, date, text, author, owner reply.",
+   "positional": "query",
+   "positional_is_list": false,
+   "positional_optional": true,
+   "columns": [
+    "rank",
+    "rating",
+    "date",
+    "author",
+    "has_owner_response",
+    "text"
+   ],
+   "sample": "place_reviews",
+   "inputs": [
+    {
+     "name": "data_id",
+     "type": "string",
+     "required": false,
+     "description": "Feature id \"0x…:0x…\" from Google Maps places (preferred).",
+     "arg": "data_id"
+    },
+    {
+     "name": "place_id",
+     "type": "string",
+     "required": false,
+     "description": "Google place id (ChIJ…), alternative to data_id.",
+     "arg": "place_id"
+    },
+    {
+     "name": "query",
+     "type": "string",
+     "required": false,
+     "description": "Alternative to ids: business name, resolved to the first place found.",
+     "arg": "query"
+    },
+    {
+     "name": "location",
+     "type": "string",
+     "required": false,
+     "description": "Where to look the name up (with query).",
+     "arg": "location"
+    },
+    {
+     "name": "sort_by",
+     "type": "string",
+     "required": false,
+     "description": "Review ordering.",
+     "enum": [
+      "relevance",
+      "newest",
+      "highest_rating",
+      "lowest_rating"
+     ],
+     "default": "relevance",
+     "arg": "sort_by"
+    },
+    {
+     "name": "country",
+     "type": "string",
+     "required": false,
+     "description": "Country to run the request from, as an ISO 3166-1 alpha-2 code (us, gb, de...).",
+     "arg": "country"
+    },
+    {
+     "name": "lang",
+     "type": "string",
+     "required": false,
+     "description": "Interface language (hl), e.g. en, it, de.",
+     "arg": "lang"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many reviews to deliver at most (1–100). You pay only for delivered reviews.",
+     "min": 1,
+     "max": 100,
+     "default": 20,
+     "arg": "max_results"
+    }
+   ]
+  },
+  {
+   "name": "leads",
+   "collector": "local_business_leads",
+   "method": "leads",
+   "help": "local businesses with the emails, phones and socials on their websites",
+   "description": "Businesses for a keyword + location enriched with emails, phones and socials from their websites.",
+   "positional": "query",
+   "positional_is_list": false,
+   "positional_optional": false,
+   "columns": [
+    "rank",
+    "name",
+    "category",
+    "phone",
+    "emails",
+    "website",
+    "site_status"
+   ],
+   "sample": "local_business_leads",
+   "inputs": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "description": "Business type, e.g. \"dentist\", \"officina meccanica\".",
+     "arg": "query"
+    },
+    {
+     "name": "location",
+     "type": "string",
+     "required": true,
+     "description": "City / area, e.g. \"Austin, TX\".",
+     "arg": "location"
+    },
+    {
+     "name": "country",
+     "type": "string",
+     "required": false,
+     "description": "Country to run the request from, as an ISO 3166-1 alpha-2 code (us, gb, de...).",
+     "arg": "country"
+    },
+    {
+     "name": "lang",
+     "type": "string",
+     "required": false,
+     "description": "Interface language (hl), e.g. en, it, de.",
+     "arg": "lang"
+    },
+    {
+     "name": "only_with_contacts",
+     "type": "boolean",
+     "required": false,
+     "description": "Deliver only leads with at least one email or phone.",
+     "default": false,
+     "arg": "only_with_contacts"
+    },
+    {
+     "name": "directories",
+     "type": "string[]",
+     "required": false,
+     "description": "Add businesses listed in these Italian directories that Google Maps did not return — the operators with no web presence. Off by default: it delivers, and bills, more rows.",
+     "enum": [
+      "paginegialle",
+      "paginebianche"
+     ],
+     "arg": "directories"
+    },
+    {
+     "name": "cross_check",
+     "type": "boolean",
+     "required": false,
+     "description": "Resolve the same business across the channels into one record instead of delivering it twice. Matching is on the phone number, on street+civic plus a distinctive word of the name, or on the name alone when it carries two distinctive words. Adds sources, sources_count, matched_by and address_confirmed to every row. Off by default: it changes the shape of the delivered rows.",
+     "default": false,
+     "arg": "cross_check"
+    },
+    {
+     "name": "verify_emails",
+     "type": "boolean",
+     "required": false,
+     "description": "Add email_check to each row: syntax, whether the domain has a mail server that accepts delivery (MX), whether the address is a role mailbox (info@, segreteria@) and whether the same address appears on other rows of the run. No SMTP probe per mailbox — see the field description.",
+     "default": false,
+     "arg": "verify_emails"
+    },
+    {
+     "name": "deep_contacts",
+     "type": "boolean",
+     "required": false,
+     "description": "When the homepage shows no email, try up to three of the site's own pages instead of one — contatti, dove siamo, and the privacy notice, which in Italy has to name the data controller with an address. Stops at the first page that yields an email, so it only costs more on the sites that were going to come back empty.",
+     "default": false,
+     "arg": "deep_contacts"
+    },
+    {
+     "name": "serp_emails",
+     "type": "boolean",
+     "required": false,
+     "description": "For businesses whose site showed no email, run one web search on their domain and keep any address the search engine quotes in its snippets — only when it is on the business's own domain. Cheaper than another page fetch and works when the site is slow or blocks. One search per such business, plus one with the comune for a business whose only mailbox is named after another comune.",
+     "default": false,
+     "arg": "serp_emails"
+    },
+    {
+     "name": "professionals",
+     "type": "boolean",
+     "required": false,
+     "description": "Read MioDottore for the same category and place and attach the professionals who practise at each business — name, specialty, profile and published prices. Maps gives you the practice and its website; this gives you the person to address the letter to. Matched by phone, or by street and civic number in the same comune, never by name: a dentist is not called like the clinic.",
+     "default": false,
+     "arg": "professionals"
+    },
+    {
+     "name": "professional_phones",
+     "type": "boolean",
+     "required": false,
+     "description": "Open each professional's profile to read their phone numbers too. One extra request per professional; only meaningful with professionals.",
+     "default": false,
+     "arg": "professional_phones"
+    },
+    {
+     "name": "professionals_as_leads",
+     "type": "boolean",
+     "required": false,
+     "description": "With professionals: the practices MioDottore lists at addresses that Maps and the directories did not return become rows of their own (source: miodottore, sources_count 1) instead of being dropped — measured on six cities, about a hundred addresses per city the other channels did not have. Set false to only attach professionals to the businesses already found.",
+     "default": true,
+     "arg": "professionals_as_leads"
+    },
+    {
+     "name": "enrich_details",
+     "type": "boolean",
+     "required": false,
+     "description": "Look up the place card of every business the map listed without its weekly hours or its review count, and fill them in (it can also add a website or phone the list row lacked). One small extra lookup per such business; off by default.",
+     "default": false,
+     "arg": "enrich_details"
+    },
+    {
+     "name": "company_data",
+     "type": "boolean",
+     "required": false,
+     "description": "For every lead that passed the contact filters: VAT number and tax code (from the site's footer and structured data, the Pagine Gialle listing, or one search on its domain), registered office, and the latest revenue published by public company-registry aggregators, with its year and source. A figure is read only from a result that carries the same VAT number, so a company with the same name elsewhere is never mixed in. Banks and financial intermediaries, whose statements have no revenue line, get their net banking income (margine di intermediazione). 1 to 3 extra searches per lead; off by default.",
+     "default": false,
+     "arg": "company_data"
+    },
+    {
+     "name": "min_revenue_eur",
+     "type": "number",
+     "required": false,
+     "description": "Keep only the leads whose verified revenue (or net banking income) is at least this amount; turns on company_data. Leads whose revenue could not be verified are dropped unless keep_unknown_revenue is set, and the run notes count the dropped leads by reason.",
+     "min": 0,
+     "arg": "min_revenue_eur"
+    },
+    {
+     "name": "keep_unknown_revenue",
+     "type": "boolean",
+     "required": false,
+     "description": "With min_revenue_eur: keep the leads whose revenue could not be verified, with the reason in company_note, instead of dropping them.",
+     "default": false,
+     "arg": "keep_unknown_revenue"
+    },
+    {
+     "name": "hq_in_area_only",
+     "type": "boolean",
+     "required": false,
+     "description": "Drop the local offices of companies registered in another province (hq_in_area false); turns on company_data. Off by default: the local office of a national company is often the lead a buyer wants.",
+     "default": false,
+     "arg": "hq_in_area_only"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many leads to deliver at most (1–500). You pay only for delivered leads.",
+     "min": 1,
+     "max": 500,
+     "default": 10,
+     "arg": "max_results"
+    }
+   ]
+  }
+ ]
+}
